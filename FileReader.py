@@ -34,4 +34,4 @@ def readData(fileName, returnType)
         tempVector = np.array(df.columns)
         result = np.delete(temp,[0,1]) #en vektor med alle opgavenavne dannes       
         
-    Return result
+    return result
