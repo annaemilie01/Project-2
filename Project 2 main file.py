@@ -1,9 +1,9 @@
 
-
-import OS
+import time
+import os
 import numpy as np
 import pandas
-import FileReader.py
+import FileReader
 import matplotlib.pyplot as plt
 
 
@@ -47,7 +47,7 @@ while status == 1:
     
     
     
-    if Commamd == 1:
+    if Command == 1:
         while True:
             try:
                 filename = str(input("Hvilken datafil skal indlæses?:"))        #User bliver bedt om et filnavn som input
