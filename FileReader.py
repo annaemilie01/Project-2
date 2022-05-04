@@ -7,8 +7,16 @@ Created on Wed May  4 08:52:04 2022
 
 import os
 import numpy as np
-
 import pandas as pd
+
+
+#########################################################################################
+#Denne fil læser csv filen og returnerer noget data derfra.
+#For at bruge funktionen skal men angive filnavn og om man ønsker at kende karaktererne, 
+#studenternes navne, studienumrene eller en liste over opgaverne som de studerende har
+#fået karakter fra.
+#########################################################################################
+
 
 def readData(fileName, returnType)
 
@@ -27,7 +35,3 @@ def readData(fileName, returnType)
         result = np.delete(temp,[0,1]) #en vektor med alle opgavenavne dannes       
         
     Return result
-
-
-
-
