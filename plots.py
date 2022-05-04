@@ -15,11 +15,13 @@ def gradesPlot(grades):
     occ = np.zeros(7)   #en vektor skabes med syv 0'er tilsvarende de syv karaktertrin
     for i in range(7):
         occ[i] = np.size(grades[grades==gradeType[i]]) #hyppigheden af hver karakter findes
+    langs=['-3','0','2','4','7','10','12']     #Bestemmer x-aksen
     
-    #plot 1 skabes
-    plt.bar(gradeType,occ)
+    plt.bar(langs,occ,color=['Green'])
     plt.title('Final Grades')
     plt.xlabel('Grade Type')
     plt.ylabel('Occurrence')
     plt.show()
+    
+#gradesPlot(np.array([2,-3,7,10,12,0,2,2]))
 
