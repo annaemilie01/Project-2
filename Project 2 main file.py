@@ -3,7 +3,7 @@
 import OS
 import numpy as np
 import pandas
-import fileReader
+import FileReader.py
 import matplotlib.pyplot as plt
 
 
@@ -15,7 +15,7 @@ class missingData(Exception): #Error type defineret for tilfælde hvor brugeren 
 dataRead = 0
 status = 1
 
-while status = 1:
+while status == 1:
 
     print(""""Velkommen til hovedmenuen, dette program kan behandle dit data for dig. #hovedmenu tekst
         Du har nu følgende valgmuligheder:
