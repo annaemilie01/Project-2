@@ -1,11 +1,14 @@
+"""
+Created on Wed May  4 11:57:07 2022
 
-import time
+"""
+
 import os
 import numpy as np
 import pandas
-import FileReader
+from FileReader import readData
 import matplotlib.pyplot as plt
-
+import time
 
 class inputOutofBounds(Exception):
     pass
@@ -50,14 +53,20 @@ while status == 1:
     if Command == 1:
         while True:
             try:
-                filename = str(input("Hvilken datafil skal indlæses?:"))        #User bliver bedt om et filnavn som input
-                open(filename)                                                      #programmet prøver at åbne filen med angivet filnavn
+                fileName = str(input("Hvilken datafil skal indlæses?:"))        #User bliver bedt om et filnavn som input
+                open(fileName)                                                      #programmet prøver at åbne filen med angivet filnavn
                 break
             except IOError:                                                         #I tilfælde af at det ikke er lykkedes at åbne en fil filename, bedes brugeren om at prøve igen
                   print("Der er ikke fundet en fil med dette filnavn")
                   print("Har du husket at slutte filnavnet med .csv?")
                   print("Prøv igen.")
                   time.sleep(3)
+        Grades = readData(fileName,"grades")
+        Names = readData(fileName,"names")
+        StudentNumbers = readData(fileName,"studentNumbers")
+        Assignments = readData(fileName,"assignments")
+    
+    
     
     if Command == 5: 
         status = 0    #programmet afsluttes hvis brugeren indtaster tallet 5
