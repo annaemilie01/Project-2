@@ -7,8 +7,10 @@ import os
 import numpy as np
 import pandas
 from FileReader import readData
+from checkErrors import ErrorCheck
 import matplotlib.pyplot as plt
 import time
+
 
 class inputOutofBounds(Exception):
     pass
@@ -53,7 +55,7 @@ while status == 1:
     if Command == 1:
         while True:
             try:
-                fileName = str(input("Hvilken datafil skal indlæses?:"))        #User bliver bedt om et filnavn som input
+                fileName = str(input("Hvilken datafil skal indlæses?:"))        #brugeren bliver bedt om et filnavn som input
                 open(fileName)                                                      #programmet prøver at åbne filen med angivet filnavn
                 break
             except IOError:                                                         #I tilfælde af at det ikke er lykkedes at åbne en fil filename, bedes brugeren om at prøve igen
@@ -66,7 +68,9 @@ while status == 1:
         StudentNumbers = readData(fileName,"studentNumbers")
         Assignments = readData(fileName,"assignments")
     
-    
+    if Command == 2:
+        ErrorCheck(StudentNumbers,Grades) #Studienumre og karakterer bliver tjekket for fejl via ErrorCheck programmet
+        
     
     if Command == 5: 
         status = 0    #programmet afsluttes hvis brugeren indtaster tallet 5
