@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 30 20:49:27 2022
-
-@author: William Hedegaard Langvad
-"""
+#Author: William Hedegaard Langvad, s214512
 
 class inputOutofBounds(Exception):
     pass
