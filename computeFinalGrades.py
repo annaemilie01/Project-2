@@ -1,3 +1,5 @@
+#Author: William Hedegaard Langvad, s214512
+
 def computeFinalGrades(grades):
     import numpy as np
     from RoundGrade import roundGrade
