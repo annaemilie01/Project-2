@@ -11,6 +11,7 @@ from checkErrors import ErrorCheck
 from GenerateGradeList import genGradeList
 from plots import gradesPlot
 from computeFinalGrades import computeFinalGrades
+from RoundGrade import roundGrade
 import matplotlib.pyplot as plt
 import time
 
