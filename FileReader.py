@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May  4 08:52:04 2022
-
-@author: William H. Langvad
-"""
+#Author: William Hedegaard Langvad, s214512
 
 import os
 import numpy as np
