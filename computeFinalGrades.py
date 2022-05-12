@@ -1,11 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 28 08:24:50 2022
-
-@author: William H. Langvad
-"""
-
 def computeFinalGrades(grades):
+    import numpy as np
+    from RoundGrade import roundGrade
     
     N = np.size(grades[:,0])    #antal elever defineres
     M = np.size(grades[0,:])    #antal opgaver defineres
@@ -22,6 +17,6 @@ def computeFinalGrades(grades):
             sortedGrades = np.sort(grades[i,:])         #en ny vektor skabes hvor elevens karakterer sorteres lavest til højest
             highGrades = np.delete(sortedGrades,0)      #den første og demed laveste karakter i vektoren fjernes
             avg = np.array([np.mean(highGrades) ])      #gennemsnitet af de resterende karakterer findes, og omdannes til en vektor                   
-            gradesFinal[i] = roundGrade(a)              #karakteren afrundes til nærmeste karaktertrin og sættes ind i listen over endelige karakterer
+            gradesFinal[i] = roundGrade(avg)              #karakteren afrundes til nærmeste karaktertrin og sættes ind i listen over endelige karakterer
         
     return gradesFinal
