@@ -1,20 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr 27 18:17:39 2022
 
-@author: William H. Langvad
-"""
-
-import numpy as np
-import os
 
 def roundGrade(grades):
+    import numpy as np
+    gradeType = np.array([-3,0,2,4,7,10,12]) #Karakterskalaen defineres
     l = np.size(grades) #antallet af karakterer i grades defineres
     gradesRounded = np.zeros(l) #en vektor oprettes med et antal 0'er tilsvarende l
-    
-    
-    gradeType = np.array([-3,0,2,4,7,10,12]) #Karakterskalaen defineres
-    
     
     for i in range(l): #koden behandler hver karakter enkeltvist
         for j in range(6): #koden kigger på tal som ligger mellem to karakterertrin af gangen.
@@ -28,3 +18,4 @@ def roundGrade(grades):
                 gradesRounded[i] = gradeType[j+1]
     
     return gradesRounded
+
