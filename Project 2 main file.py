@@ -24,7 +24,7 @@ status = 1
 
 while status == 1:
 
-    print(""""Velkommen til hovedmenuen, dette program kan behandle dit data for dig. #hovedmenu tekst
+    print(""""Velkommen til hovedmenuen, dette program kan behandle dit data for dig. 
         Du har nu følgende valgmuligheder:
         1. Indlæs ny data
         2. Check for datafejl
