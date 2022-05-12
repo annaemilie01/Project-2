@@ -19,8 +19,6 @@ def genGradeList(Grades,Names,Assignment):
     M = np.hstack((Names,Grades)) #Vi samler listen med navne med listen over karakterer
     M = M[M[:,0].argsort()] # og sorterer alfabetisk 
     
-    print(M)
-    
     navn = np.array(["Navn"]) 
     snit = np.array(["Endelig karakter"]) 
     H = np.append(navn,Assignment) #Vi skaber en Header med kategorier for kolonerne i matricen
