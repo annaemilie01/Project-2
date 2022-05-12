@@ -8,8 +8,12 @@ import numpy as np
 import pandas
 from FileReader import readData
 from checkErrors import ErrorCheck
+from GenerateGradeList import genGradeList
+from plots import gradesPlot
+from computeFinalGrades import computeFinalGrades
 import matplotlib.pyplot as plt
 import time
+
 
 
 class inputOutofBounds(Exception):
@@ -67,10 +71,16 @@ while status == 1:
         Names = readData(fileName,"names")
         StudentNumbers = readData(fileName,"studentNumbers")
         Assignments = readData(fileName,"assignments")
-    
+        dataRead = 1
+        
     if Command == 2:
         ErrorCheck(StudentNumbers,Grades) #Studienumre og karakterer bliver tjekket for fejl via ErrorCheck programmet
-        
+    
+    if Command == 3:
+        gradesPlot(Grades,Names,Assignemts)
+    
+    if Command == 4:
+        genGradeList(Grades,Names,Assignemts)      
     
     if Command == 5: 
         status = 0    #programmet afsluttes hvis brugeren indtaster tallet 5
