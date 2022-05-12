@@ -1,4 +1,4 @@
-#Author: William Hedegaard Langvad, s214512
+#Author: Anna Emilie Borre s214524 & William Hedegaard Langvad s214512
 
 import os
 import numpy as np
