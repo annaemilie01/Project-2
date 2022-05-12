@@ -17,7 +17,9 @@ def genGradeList(Grades,Names,Assignment):
     Names = Names.reshape(l,1) #og omdanner vektoren til en matrix med en enkelt kolonne i med samme længde
     
     M = np.hstack((Names,Grades)) #Vi samler listen med navne med listen over karakterer
-    M.argsort(axis=0) # og sorterer alfabetisk 
+    M = M[M[:,0].argsort()] # og sorterer alfabetisk 
+    
+    print(M)
     
     navn = np.array(["Navn"]) 
     snit = np.array(["Endelig karakter"]) 
