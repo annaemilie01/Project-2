@@ -1,4 +1,4 @@
-#Author: William Hedegaard Langvad
+#Author: William Hedegaard Langvad s214512
 
 def roundGrade(grades):
     import numpy as np
