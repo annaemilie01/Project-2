@@ -29,9 +29,9 @@ def genGradeList(Grades,Names,Assignment):
     
     gradeList = np.hstack((M,Avg)) 
     
-    df = pd.DataFrame(data = gradeList,columns = Header)
+    df = pd.DataFrame(data = gradeList,columns = Header) #gradelist bliver formatteret
     
-    print(df)
+    print(df) #Gradeslist bliver printet
     print("""
           
           
