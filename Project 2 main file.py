@@ -70,6 +70,9 @@ while status == 1:
     
     if Command == 2:
         ErrorCheck(StudentNumbers,Grades) #Studienumre og karakterer bliver tjekket for fejl via ErrorCheck programmet
+    
+    if Command == 3:
+        gradesPlot(Grades,Names,Assignments) #Der laves plots via plot funktionen
         
     
     if Command == 5: 
