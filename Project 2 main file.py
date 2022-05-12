@@ -8,6 +8,7 @@ import numpy as np
 import pandas
 from FileReader import readData
 from checkErrors import ErrorCheck
+from plots2 import gradesPlot
 import matplotlib.pyplot as plt
 import time
 
