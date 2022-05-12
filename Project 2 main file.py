@@ -1,5 +1,14 @@
 #Author: Anna Emilie Borre & William Hedegaard Langvad s214512
 
+#Dette her hovedsciptet for vores Projekt
+#Programmet er interaktivt og kan tage en fil med karakterer og sortere dem alfabetisk efter elevernes navne, 
+#samt vise den data grafisk med plots.
+#Programmet kan udelukkende indlæse csv-filer
+
+
+##################################################################################################################################################################
+#Initialisering
+##################################################################################################################################################################
 import os
 import numpy as np
 import pandas
@@ -22,8 +31,13 @@ class missingData(Exception): #Error type defineret for tilfælde hvor brugeren 
 dataRead = 0
 status = 1
 
-while status == 1:
+###################################################################################################################################################################
+#Main script
+###################################################################################################################################################################
 
+while status == 1:
+    
+    #Dette er hovedmenuen hvor brugeren får sine valgmuligheder
     print(""""Velkommen til hovedmenuen, dette program kan behandle dit data for dig. 
         Du har nu følgende valgmuligheder:
         1. Indlæs ny data
@@ -33,7 +47,7 @@ while status == 1:
         5. Afslut""")
 
 
-
+    
     while True:
         try:
             Command = int(input("Indtast vænligst dit valg som et tal mellem 1 og 5:")) #programmet spørger hvilken funktion brugeren ønsker at bruge
@@ -76,10 +90,10 @@ while status == 1:
         ErrorCheck(StudentNumbers,Grades) #Studienumre og karakterer bliver tjekket for fejl via ErrorCheck programmet
     
     if Command == 3:
-        gradesPlot(Grades,Names,Assignments)
+        gradesPlot(Grades,Names,Assignments) #Plots bliver genereret
     
     if Command == 4:
-        genGradeList(Grades,Names,Assignments)      
+        genGradeList(Grades,Names,Assignments) #Gradelist bliver genereret
     
     if Command == 5: 
         status = 0    #programmet afsluttes hvis brugeren indtaster tallet 5
