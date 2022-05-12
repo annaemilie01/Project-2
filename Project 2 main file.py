@@ -1,7 +1,4 @@
-"""
-Created on Wed May  4 11:57:07 2022
-
-"""
+#Author: Anna Emilie Borre & William Hedegaard Langvad s214512
 
 import os
 import numpy as np
@@ -85,6 +82,8 @@ while status == 1:
     
     if Command == 5: 
         status = 0    #programmet afsluttes hvis brugeren indtaster tallet 5
+        
+    time.sleep(2)
     
     
     
