@@ -1,9 +1,14 @@
 
+#Author: William Hedegaard Langvad s214512
+
+
 
 import numpy as np
 
 
 def genGradeList(Grades,Names,Assignment):
+    import pandas as pd
+    
     #Vi samler alle vektorerne til en matrice
     #og sorterer dem i alfabetisk rækkefølge
     from computeFinalGrades import computeFinalGrades
@@ -15,17 +20,21 @@ def genGradeList(Grades,Names,Assignment):
     M.argsort(axis=0) # og sorterer alfabetisk 
     
     navn = np.array(["Navn"]) 
-    snit = np.array(["Snit"]) 
-    H = np.append(navn,Assignment) #Vi skaber en Header med kategorier for kollonerne i matricen
-    H = np.append(H,snit)
+    snit = np.array(["Endelig karakter"]) 
+    H = np.append(navn,Assignment) #Vi skaber en Header med kategorier for kolonerne i matricen
+    Header = np.append(H,snit)
     
     Avg = computeFinalGrades(M[:,1::]) #Den højre del af gradelist genereres med alle gennemsnidtskarakterer genereres
     Avg = Avg.reshape(l,1)
     
-    List = np.hstack((M,Avg)) 
-    gradeList = np.vstack((H,List))
-     #Header, karakterliste og gennemsnitskaraktererene i en samlet liste
+    gradeList = np.hstack((M,Avg)) 
     
-    print(gradeList)
- 
+    df = pd.DataFrame(data = gradeList,columns = Header)
+    
+    print(df)
+    print("""
+          
+          
+          """)
+
 
