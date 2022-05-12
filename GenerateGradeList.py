@@ -14,7 +14,7 @@ def genGradeList(Grades,Names,Assignment):
     
     navn = np.array(["Navn"]) 
     snit = np.array(["Snit"]) 
-    H = np.append(navn,Assignment,Snit) #Vi skaber en Header med kategorier for kollonerne i matricen
+    H = np.append(navn,Assignment,snit) #Vi skaber en Header med kategorier for kollonerne i matricen
     
     Avg = computeFinalGrades(M[:,1::]) #Den højre del af gradelist genereres med alle gennemsnidtskarakterer genereres
     Avg = Avg.reshape(l,1)
