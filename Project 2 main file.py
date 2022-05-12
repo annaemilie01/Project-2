@@ -77,10 +77,10 @@ while status == 1:
         ErrorCheck(StudentNumbers,Grades) #Studienumre og karakterer bliver tjekket for fejl via ErrorCheck programmet
     
     if Command == 3:
-        gradesPlot(Grades,Names,Assignemts)
+        gradesPlot(Grades,Names,Assignments)
     
     if Command == 4:
-        genGradeList(Grades,Names,Assignemts)      
+        genGradeList(Grades,Names,Assignments)      
     
     if Command == 5: 
         status = 0    #programmet afsluttes hvis brugeren indtaster tallet 5
