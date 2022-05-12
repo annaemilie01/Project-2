@@ -70,6 +70,7 @@ while status == 1:
         StudentNumbers = readData(fileName,"studentNumbers")
         Assignments = readData(fileName,"assignments")
         dataRead = 1
+        print("Data er indlæst korrekt")
         
     if Command == 2:
         ErrorCheck(StudentNumbers,Grades) #Studienumre og karakterer bliver tjekket for fejl via ErrorCheck programmet
