@@ -1,4 +1,4 @@
-#Author: Anna Emilie Borre & William Hedegaard Langvad s214512
+#Author: Anna Emilie Borre s214524 & William Hedegaard Langvad s214512
 
 #Dette her hovedsciptet for vores Projekt
 #Programmet er interaktivt og kan tage en fil med karakterer og sortere dem alfabetisk efter elevernes navne, 
