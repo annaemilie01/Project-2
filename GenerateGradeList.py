@@ -12,13 +12,17 @@ def genGradeList(Grades,Names,Assignment):
     M = np.hstack((Names,Grades)) #Vi samler listen med navne med listen over karakterer
     M.argsort(axis=0) # og sorterer alfabetisk 
     
-    navn = np.array(["Navn"]) #Vi skaber en Header med kategorier for tallene i 
-    T = np.append(navn,Assignment)
+    navn = np.array(["Navn"]) 
+    snit = np.array(["Snit"]) 
+    H = np.append(navn,Assignment,Snit) #Vi skaber en Header med kategorier for kollonerne i matricen
     
-    B = computeFinalGrades(grades)
+    Avg = computeFinalGrades(M[:,1::]) #Den højre del af gradelist genereres med alle gennemsnidtskarakterer genereres
+    Avg = Avg.reshape(l,1)
     
-    gradeList = np.vstack((T,M,B))
+    List = np.vstack((T,M))
+    gradeList = np.hstack(List,Avg) #Header, karakterliste og gennemsnitskaraktererene i en samlet liste
     
+    print(gradeList)
     
-    return gradeList
+ 
 
