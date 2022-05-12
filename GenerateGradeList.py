@@ -19,7 +19,7 @@ def genGradeList(Grades,Names,Assignment):
     Avg = computeFinalGrades(M[:,1::]) #Den højre del af gradelist genereres med alle gennemsnidtskarakterer genereres
     Avg = Avg.reshape(l,1)
     
-    List = np.vstack((T,M))
+    List = np.vstack((H,M))
     gradeList = np.hstack(List,Avg) #Header, karakterliste og gennemsnitskaraktererene i en samlet liste
     
     print(gradeList)
